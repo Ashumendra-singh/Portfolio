@@ -5,7 +5,7 @@ import React from 'react';
 const HeroSection = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 relative">
-      <div className="max-w-4xl mx-auto text-center relative z-10">
+      <div className="max-w-6xl mx-auto text-center relative z-10">
         <div className="mb-6 inline-block animate-fade-in-up">
           <span className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-white text-sm hover:bg-white/10 transition-all duration-300 cursor-default">
             Full Stack Developer
@@ -20,8 +20,8 @@ const HeroSection = () => {
           </span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-400 mb-8 max-w-sm sm:max-w-2xl mx-auto animate-fade-in-up leading-relaxed" style={{ animationDelay: '0.4s' }}>
-          Building responsive web applications with the&nbsp;
-          <span className="text-white font-semibold">MERN stack</span> and solving complex problems
+          I build responsive web applications with the&nbsp;
+          <span className="text-white font-semibold">MERN stack</span> and love solving complex problems.
         </p>
         <div className="flex gap-4 justify-center mb-12 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
           <a 

@@ -20,7 +20,7 @@ function App() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
       
-      // Update active section based on scroll position
+      // Update the active section based on the scroll position.
       const sections = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
       const current = sections.find(section => {
         const element = document.getElementById(section);
@@ -46,7 +46,7 @@ function App() {
     };
   }, []);
 
-  // Intersection Observer for fade-in animations
+  // Set up the Intersection Observer for fade-in animations.
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

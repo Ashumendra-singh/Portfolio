@@ -15,7 +15,7 @@ const ExperienceSection = ({ isVisible }) => {
 
   return (
     <section id="experience" className="py-20 px-6 bg-black/20">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-12 text-center text-white" data-animate id="experience-title">
           Experience
         </h2>

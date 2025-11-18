@@ -5,7 +5,7 @@ import { Code, Briefcase, GraduationCap } from 'lucide-react';
 const AboutSection = ({ isVisible }) => {
   return (
     <section id="about" className="py-20 px-6">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-12 text-center animate-fade-in-up text-white" data-animate id="about-title">
           About Me
         </h2>
@@ -15,13 +15,10 @@ const AboutSection = ({ isVisible }) => {
           id="about-content"
         >
           <p className="text-gray-300 text-xl leading-relaxed mb-6">
-            I'm a B.Tech Computer Science student at Pranveer Singh Institute of Technology, Kanpur, graduating in 2025. 
-            With a strong foundation in data structures, algorithms, and object-oriented programming, I'm passionate about 
-            creating efficient and scalable web applications.
+            I have a strong foundation in data structures, algorithms, and object-oriented programming, and I am passionate about creating efficient and scalable web applications.
           </p>
           <p className="text-gray-300 text-lg leading-relaxed mb-8">
-            I've solved over 450+ problems on LeetCode, demonstrating my commitment to continuous learning and problem-solving. 
-            My goal is to contribute to dynamic development teams and grow in fast-paced tech environments.
+            I have solved over 450 problems on LeetCode, demonstrating my commitment to continuous learning and strong problem-solving skills. My goal is to contribute effectively to dynamic development teams and thrive in fast-paced tech environments.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[

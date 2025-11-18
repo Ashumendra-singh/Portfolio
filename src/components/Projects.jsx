@@ -13,7 +13,9 @@ const ProjectsSection = ({ isVisible }) => {
         'Cloud storage integration with Cloudinary'
       ],
       tech: ['React.js', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB'],
-      icon: '💼'
+      icon: '💼',
+      github: 'https://github.com/Ashumendra-singh/jobportal',
+      live: '#'
     },
     {
       title: 'Rent Seeker Hub',
@@ -24,18 +26,47 @@ const ProjectsSection = ({ isVisible }) => {
         'Optimized file storage with Cloudinary',
         'Seamless navigation and performance'
       ],
-      tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JavaScript'],
-      icon: '🏠'
+      tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JavaScript',],
+      icon: '🏠',
+      github: 'https://github.com/Ashumendra-singh/RentSeaker-Hub',
+      live: '#'
+    },
+    {
+      title: 'Planner',
+      description: 'Organize your tasks efficiently',
+      features: [
+        'CRUD operations for tasks with validation using Zod',
+        'Create, edit, and delete tasks ',
+        'Password-protected user accounts with JWT authentication and Password recovery',
+        'Responsive design for all devices'
+      ],
+      tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'TypeScript', 'Tailwind', 'Zod'],
+      icon: '🗓️',
+      github: 'https://github.com/Ashumendra-singh/Planner',
+      live: '#'
+    },
+    {
+      title: 'Youtube Thumbnail Generator',
+      description: 'Generate eye-catching YouTube thumbnails effortlessly',
+      features: [
+        'Youtube thumbnail creation with customizable Sizes',
+        'User-friendly interface for quick edits',
+        'High-resolution downloads optimized for YouTube',
+      ],
+      tech: ['React.js', 'JavaScript', 'Tailwind CSS'],
+      icon: '🖼️',
+      github: 'https://github.com/Ashumendra-singh/Youtube-Thumbnail-Generator',
+      live: '#'
     }
   ];
 
   return (
     <section id="projects" className="py-20 px-6">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-12 text-center text-white" data-animate id="projects-title">
           Featured Projects
         </h2>
-        <div className="grid gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, idx) => (
             <div 
               key={idx} 
@@ -69,6 +100,24 @@ const ProjectsSection = ({ isVisible }) => {
                     {tech}
                   </span>
                 ))}
+              </div>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-lg border border-gray-700 text-gray-200 hover:text-white hover:border-gray-500 hover:bg-white/10 transition-colors duration-300"
+                >
+                  View GitHub
+                </a>
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-lg bg-white text-black hover:bg-gray-200 transition-colors duration-300"
+                >
+                  View Live
+                </a>
               </div>
             </div>
           ))}
