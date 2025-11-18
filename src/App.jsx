@@ -51,10 +51,12 @@ function App() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          setIsVisible(prev => ({
-            ...prev,
-            [entry.target.id]: entry.isIntersecting
-          }));
+          if (!entry.target.id) return;
+          if (!entry.isIntersecting) return;
+           setIsVisible(prev => ({
+             ...prev,
+            [entry.target.id]: true
+           }));
         });
       },
       { threshold: 0.1 }
@@ -76,7 +78,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-black via-gray-950 to-black text-white overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-950 to-black text-white overflow-x-hidden">
       <AnimatedBackground mousePosition={mousePosition} />
       
       <Navigation 
@@ -114,6 +116,15 @@ function App() {
           }
         }
 
+        @keyframes float-mobile {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-12px);
+          }
+        }
+
         .animate-fade-in-up {
           animation: fade-in-up 0.8s ease-out forwards;
         }
@@ -129,6 +140,17 @@ function App() {
 
         .animate-fade-in {
           animation: fade-in-up 0.5s ease-out forwards;
+        }
+
+        @media (max-width: 768px) {
+          .animate-fade-in-up {
+            animation-duration: 0.6s;
+          }
+          .animate-float,
+          .animate-float-delayed {
+            animation-name: float-mobile;
+            animation-duration: 8s;
+          }
         }
       `}</style>
     </div>

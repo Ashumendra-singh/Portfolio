@@ -4,9 +4,13 @@ import { Github, Linkedin, Mail, Menu, X, Code, Briefcase, GraduationCap, ArrowR
 // Navigation Component
 const Navigation = ({ activeSection, scrolled, scrollToSection }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const baseNavClass = 'fixed h-20 top-0 w-full z-50 transition-all duration-500';
+  const navStateClass = (scrolled || isMenuOpen)
+    ? 'bg-black/90 backdrop-blur-xl shadow-lg shadow-white/5'
+    : 'bg-transparent';
 
   return (
-    <nav className={`fixed h-20 top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-black/90 backdrop-blur-xl shadow-lg shadow-white/5' : 'bg-transparent'}`}>
+    <nav className={`${baseNavClass} ${navStateClass}`}>
       <div className="max-w-4/5 mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold text-white hover:text-gray-300 transition-colors">
@@ -35,7 +39,7 @@ const Navigation = ({ activeSection, scrolled, scrollToSection }) => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in">
+          <div className="lg:hidden mt-4 pb-4 flex flex-col gap-4 animate-fade-in backdrop-blur-xl bg-black/70 rounded-lg p-4 border-2 border-gray-800">
             {['home', 'about', 'skills', 'projects', 'experience', 'contact'].map((item, idx) => (
               <button
                 key={item}
