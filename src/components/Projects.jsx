@@ -4,6 +4,18 @@ import React from 'react';
 const ProjectsSection = ({ isVisible }) => {
   const projects = [
     {
+      title: 'Tasty',
+      description: 'Restaurant food app',
+      features: [
+        'Browse a variety of dishes with detailed descriptions and images',
+        'Add items to your cart and customize your order',
+      ],  
+      tech: ['HTML','CSS', 'SCSS', 'JavaScript'],
+      icon: '🍽️',
+      github: 'https://github.com/Ashumendra-singh/Restaurant',
+      live: 'https://foodtastii.netlify.app/',
+    },
+    {
       title: 'JobPortal',
       description: 'Find your dream job',
       features: [
