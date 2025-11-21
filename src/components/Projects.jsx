@@ -7,6 +7,7 @@ const ProjectsSection = ({ isVisible }) => {
       title: 'Tasty',
       description: 'Restaurant food app',
       features: [
+        'Implemented a user-friendly interface for browsing and ordering food online',
         'Browse a variety of dishes with detailed descriptions and images',
         'Add items to your cart and customize your order',
       ],  
